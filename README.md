@@ -5,7 +5,7 @@
 > What is UNIFIED-C?
 
 UNIFIED-C is C-compatible (ish, read on for the details) source code that's written using a small subset of the available character space. It's named after the characters `d`, `e`, `f`, `i`, `n`, and `u`, which are all the letters you need to type fluent UNIFIED-C.
-The full UNIFIED-C character set consists of the aforementioned letters, the digits `0` through `9`, the brackets `(` and `)`, the comma `,` and pound sign `#`, and, for rather arcane reasons, the question mark `?`, forward slash `/` and equals sign `=`. Oh, and the space character is also necessary. That's a total of only 24 different characters to write *any* C program!
+The full UNIFIED-C character set consists of the aforementioned letters, the digits `0` through `9`, the brackets `(` and `)`, the comma `,` and pound sign `#`, and, for rather arcane reasons, the question mark `?`, forward and backward slashes `/` and `\` and equals sign `=`. Oh, and the space character is also necessary. That's a total of only 25 different characters to write *any* C program!
 
 > How does it work?
 
