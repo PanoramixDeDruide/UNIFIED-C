@@ -41,20 +41,16 @@ while IFS= read -r line; do
   braces=0
   while [[ $i -lt ${#line} ]]; do
     firstchar=${line:i:1}
-    firstchar2=`printf "%x" "'$firstchar" | tr [a-z] [A-Z]`
-    firstchar3=`echo $((16#$firstchar2))`
-    firstchar4=`echo "unifiedd$firstchar3"`
+    firstchar2=`printf "unifiedd%d" "'$firstchar"`
     let "i = i + 1"
     if [[ $i -lt ${#line} ]]; then
       secondchar=${line:i:1}
-      secondchar2=`printf "%x" "'$secondchar" | tr [a-z] [A-Z]`
-      secondchar3=`echo $((16#$secondchar2))`
-      secondchar4=`echo "unifiedd$secondchar3"`
+      secondchar2=`printf "unifiedd%d" "'$secondchar"`
       let "i = i + 1"
-      echo -n "unifiedf3($firstchar4,unifiedf3($secondchar4,"
+      echo -n "unifiedf3($firstchar2,unifiedf3($secondchar2,"
       let "braces = braces + 2"
     else
-      echo -n "unifiedf3($firstchar4,)"
+      echo -n "unifiedf3($firstchar2,)"
     fi
   done
   while [[ $braces -gt 0 ]]; do
